@@ -20,7 +20,7 @@ export default function YoutubeContent() {
           >
             <a href="https://www.youtube.com/watch?v=hi_zSO8y_2U" target="_blank" className="relative">
               <PlayIcon className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 z-10"/>
-              <Image src="/content/content-1.jpg" alt="" width="1920" height="1080" className="rounded-3xl brightness-[80%] blur-[1px] saturate-[75%] group-hover/content:saturate-100 group-hover/content:blur-0  duration-500"/>
+              <Image src="/content/content-1.jpg" alt="THIS IS WHAT REAL INDONESIAN IESF TEAM SHOULD LOOK" width="854" height="480" className="rounded-3xl brightness-[80%] blur-[1px] saturate-[75%] group-hover/content:saturate-100 group-hover/content:blur-0  duration-500"/>
             </a>
           </Atropos>
           <Atropos
@@ -29,7 +29,7 @@ export default function YoutubeContent() {
           >
             <a href="https://www.youtube.com/watch?v=PxZwH2k1tKE" target="_blank" className="relative">
               <PlayIcon className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 z-10"/>
-              <Image src="/content/content-2.jpg" alt="" width="1920" height="1080" className="rounded-3xl brightness-[80%] blur-[1px] saturate-[75%] group-hover/content:saturate-100 group-hover/content:blur-0 duration-500"/>
+              <Image src="/content/content-2.jpg" alt="Hotel Sanhok Horror Story" width="854" height="480" className="rounded-3xl brightness-[80%] blur-[1px] saturate-[75%] group-hover/content:saturate-100 group-hover/content:blur-0 duration-500"/>
             </a>
           </Atropos>
           <Atropos
@@ -42,7 +42,7 @@ export default function YoutubeContent() {
                 <ArrowUpRightIcon className="w-20 h-20"/>
                 <span className="font-bold text-2xl tracking-wider">More</span>
               </div>
-              <Image src="/content/content-3.jpg" alt="" width="1920" height="1080" className="rounded-3xl brightness-[80%] blur"/>
+              <Image src="/content/content-3.jpg" alt="Rusman Dreamocel" width="854" height="480" className="rounded-3xl brightness-[80%] blur"/>
             </a>
           </Atropos>
         </div>
