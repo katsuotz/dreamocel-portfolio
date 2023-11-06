@@ -5,11 +5,11 @@ variables:
 deploy_prod:
   stage: build
   script:
-    - cd /var/www/project/irpon/portfolio
+    - cd /var/www/project/irpon/dreamocel-portfolio
     - git pull
     - npm i --frozen-lock
     # - cat $env_prod > .env
     - npm run build
     # - pm2 start "yarn start" --name irvanlg-portfolio
-    - pm2 restart irpon-portfolio --update-env
+    - pm2 restart irpon-dreamocel-portfolio --update-env
 
