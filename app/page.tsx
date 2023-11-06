@@ -10,6 +10,7 @@ import JoinDiscord from "@/components/home/join-discord";
 import YoutubeContent from "@/components/home/youtube-content";
 import SignatureHero from "@/components/home/signature-hero";
 import Moment from "@/components/home/moment";
+import Image from "next/image";
 // import {useEffect, useState} from "react";
 
 export default function Home() {
@@ -74,8 +75,7 @@ export default function Home() {
       {/*  }}*/}
       {/*/>*/}
       <Banner/>
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img src="/bg-2.jpg" alt="" className="absolute w-full mt-[-350px]"/>
+      <Image src="/bg-2.jpg" alt="" unoptimized={true} width={1920} height={1070} className="absolute w-full mt-[-350px]"/>
       <TeamExperience/>
       <Achievement/>
       <SignatureHero/>
@@ -84,8 +84,7 @@ export default function Home() {
       <Trivia/>
       <JoinDiscord/>
       <Footer/>
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img src="/bg-2.jpg" alt="" className="absolute bottom-0 -scale-y-100 h-[500px] w-full object-cover object-bottom -z-10"/>
+      <Image src="/bg-2.jpg" alt="" unoptimized={true} width={1920} height={1070} className="absolute bottom-0 -scale-y-100 h-[500px] w-full object-cover object-bottom -z-10"/>
       <BackToTop/>
     </div>
   )

@@ -65,9 +65,7 @@ export default function Banner() {
   return (
     <section
       className="h-screen w-full relative flex justify-center items-center overflow-hidden bg-banner bg-cover z-50">
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img src="/dreamocel.png" alt=""
-           className="absolute bottom-0 z-30 pointer-events-none h-[480px] sm:h-[520px] 2xl:h-[620px] 3xl:h-[900px]"/>
+      <Image src="/dreamocel.png" alt="" width={479} height={637} className="absolute bottom-0 z-30 pointer-events-none w-auto h-[480px] sm:h-[520px] 2xl:h-[620px] 3xl:h-[900px]"/>
 
       <div className="absolute left-1/2 -translate-x-1/2 bottom-20 flex justify-center mt-14 z-30">
         <div className="relative flex justify-center items-center cursor-pointer animate-bounce" onClick={scrollPage}>
