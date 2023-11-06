@@ -10,66 +10,69 @@ import JoinDiscord from "@/components/home/join-discord";
 import YoutubeContent from "@/components/home/youtube-content";
 import SignatureHero from "@/components/home/signature-hero";
 import Moment from "@/components/home/moment";
-import {useEffect, useState} from "react";
+// import {useEffect, useState} from "react";
 
 export default function Home() {
-  const [position, setPosition] = useState({ x: 0, y: 0 });
 
-  let mousePosition = {
-    x: 0,
-    y: 0
-  }
+  /*  disable mouse animation */
 
-  let ballPosition = {
-    x: 0,
-    y: 0
-  }
-
-  let speed = 0.05
-
-  const animate = () => {
-    let distX = mousePosition.x - ballPosition.x;
-    let distY = mousePosition.y - ballPosition.y;
-
-    ballPosition.x = ballPosition.x + (distX * speed)
-    ballPosition.y = ballPosition.y + (distY * speed)
-
-    updatePosition()
-
-    requestAnimationFrame(animate)
-  }
-
-  useEffect(() => {
-    const handleMouseMove = async (e:MouseEvent) => {
-      mousePosition.x = e.clientX
-      mousePosition.y = e.clientY
-    };
-
-    window.addEventListener('mousemove', handleMouseMove);
-
-    animate()
-
-    return () => {
-      window.removeEventListener('mousemove', handleMouseMove);
-    };
-  }, []);
-
-  const updatePosition = () => {
-    setPosition({
-      x: ballPosition.x,
-      y: ballPosition.y,
-    })
-  }
+  // const [position, setPosition] = useState({ x: 0, y: 0 });
+  //
+  // let mousePosition = {
+  //   x: 0,
+  //   y: 0
+  // }
+  //
+  // let ballPosition = {
+  //   x: 0,
+  //   y: 0
+  // }
+  //
+  // let speed = 0.05
+  //
+  // const animate = () => {
+  //   let distX = mousePosition.x - ballPosition.x;
+  //   let distY = mousePosition.y - ballPosition.y;
+  //
+  //   ballPosition.x = ballPosition.x + (distX * speed)
+  //   ballPosition.y = ballPosition.y + (distY * speed)
+  //
+  //   updatePosition()
+  //
+  //   requestAnimationFrame(animate)
+  // }
+  //
+  // useEffect(() => {
+  //   const handleMouseMove = async (e:MouseEvent) => {
+  //     mousePosition.x = e.clientX
+  //     mousePosition.y = e.clientY
+  //   };
+  //
+  //   window.addEventListener('mousemove', handleMouseMove);
+  //
+  //   animate()
+  //
+  //   return () => {
+  //     window.removeEventListener('mousemove', handleMouseMove);
+  //   };
+  // }, []);
+  //
+  // const updatePosition = () => {
+  //   setPosition({
+  //     x: ballPosition.x,
+  //     y: ballPosition.y,
+  //   })
+  // }
 
   return (
     <div>
-      <div
-        className="hidden sm:block w-[30px] h-[30px] z-[100] border border-white fixed rounded-full -translate-x-1/2 -translate-y-1/2 pointer-events-none animate"
-        style={{
-          left: position.x + 'px',
-          top: position.y + 'px',
-        }}
-      />
+      {/*<div*/}
+      {/*  className="hidden sm:block w-[30px] h-[30px] z-[100] border border-white fixed rounded-full -translate-x-1/2 -translate-y-1/2 pointer-events-none animate"*/}
+      {/*  style={{*/}
+      {/*    left: position.x + 'px',*/}
+      {/*    top: position.y + 'px',*/}
+      {/*  }}*/}
+      {/*/>*/}
       <Banner/>
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img src="/bg-2.jpg" alt="" className="absolute w-full mt-[-350px]"/>
