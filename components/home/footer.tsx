@@ -5,7 +5,7 @@ import {ArrowUpRightIcon} from 'lucide-react'
 
 export default function Footer() {
   return (
-    <div className="lg:pt-20 pt-12 lg:pb-20 pb-12">
+    <div className="xl:pt-16 pt-12 xl:pb-16 pb-12">
       {/*<div className="flex gap-4 mb-6 justify-center">*/}
       {/*  <SocialMedia/>*/}
       {/*</div>*/}

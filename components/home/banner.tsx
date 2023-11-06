@@ -63,9 +63,11 @@ export default function Banner() {
   }
 
   return (
-    <section className="h-screen w-full relative flex justify-center items-center overflow-hidden bg-banner bg-cover z-50">
+    <section
+      className="h-screen w-full relative flex justify-center items-center overflow-hidden bg-banner bg-cover z-50">
       {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img src="/dreamocel.png" alt="" className="absolute bottom-0 z-30 pointer-events-none h-[480px] sm:h-[620px] 3xl:h-[900px]"/>
+      <img src="/dreamocel.png" alt=""
+           className="absolute bottom-0 z-30 pointer-events-none h-[480px] sm:h-[520px] 2xl:h-[620px] 3xl:h-[900px]"/>
 
       <div className="absolute left-1/2 -translate-x-1/2 bottom-20 flex justify-center mt-14 z-30">
         <div className="relative flex justify-center items-center cursor-pointer animate-bounce" onClick={scrollPage}>
@@ -83,10 +85,12 @@ export default function Banner() {
                     social.image ?
                       <Image
                         sizes="100vw"
-                        width={0} height={32} src={social.image} alt={social.name} className={cn([
-                        'w-auto',
-                        social.class ? social.class : 'h-6'
-                      ])}/> : ''
+                        width={0} height={32} src={social.image} alt={social.name}
+                        className={cn([
+                          'w-auto',
+                          social.class ? social.class : 'h-6'
+                        ])}
+                      /> : ''
                   }
                   {
                     social.icon ?
@@ -102,9 +106,11 @@ export default function Banner() {
         })}
       </div>
 
-      <div className="text-white flex flex-col z-10 absolute bottom-[460px] sm:bottom-[550px] 3xl:bottom-[820px] items-center">
-        <p className="text-center text-2xl sm:text-5xl font-medium banner-name">Randy Muhammad Sapoetra</p>
-        <h1 className="banner-text text-5xl sm:text-[190px] font-black tracking-wider sm:-ml-2.5 flex items-center">
+      <div
+        className="text-white flex flex-col z-10 absolute bottom-[460px] 2xl:bottom-[550px] 3xl:bottom-[820px] items-center">
+        <p className="text-center text-2xl xl:text-3xl 2xl:text-5xl font-medium banner-name">Randy Muhammad Sapoetra</p>
+        <h1
+          className="banner-text text-5xl sm:text-[150px] 2xl:text-[190px] font-black tracking-wider sm:-ml-2.5 flex items-center">
           DREAMOCEL
         </h1>
       </div>
