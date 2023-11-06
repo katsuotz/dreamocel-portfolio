@@ -6,10 +6,10 @@ import Image from "next/image";
 export default function Trivia() {
   return (
     <section className="relative flex flex-col justify-center items-center xl:pt-16 pt-12 xl:pb-16 pb-12">
-      <h3 className="text-3xl sm:text-5xl font-bold mb-8 flex items-center tracking-wider">
+      <h2 className="text-3xl sm:text-5xl font-bold mb-8 flex items-center tracking-wider">
         <PuzzleIcon className="w-8 h-8 sm:w-10 sm:h-10 mr-4"/>
         Trivia
-      </h3>
+      </h2>
 
       <div className="container flex flex-col gap-2 text-xl sm:text-3xl font-medium text-center">
         <div>

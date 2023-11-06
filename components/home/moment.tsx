@@ -7,10 +7,10 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 export default function Moment() {
   return (
     <section className="relative flex flex-col justify-center items-center xl:pt-16 pt-12 xl:pb-16 pb-12">
-      <h3 className="text-3xl sm:text-5xl font-bold mb-8 sm:mb-14 flex items-center tracking-wider">
+      <h2 className="text-3xl sm:text-5xl font-bold mb-8 sm:mb-14 flex items-center tracking-wider">
         <Gamepad2Icon className="w-8 h-8 sm:w-14 sm:h-14 mr-4"/>
         Best Moment
-      </h3>
+      </h2>
 
       <div className="container">
         <Tabs defaultValue="pog" className="w-full flex flex-col items-center">
