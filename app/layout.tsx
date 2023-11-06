@@ -2,6 +2,7 @@
 
 import '@/app/globals.css'
 import {Outfit} from 'next/font/google'
+import Script from "next/script";
 
 const outfit = Outfit({subsets: ['latin']})
 
@@ -32,6 +33,16 @@ export default function RootLayout(
     <main className="relative">
       {children}
     </main>
+    <Script src="https://www.googletagmanager.com/gtag/js?id=G-2ZJPZRKNC3" />
+    <Script id="google-analytics">
+      {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+ 
+          gtag('config', 'G-2ZJPZRKNC3');
+        `}
+    </Script>
     </body>
     </html>
   )
