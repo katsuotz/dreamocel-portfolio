@@ -12,4 +12,6 @@ deploy_prod:
     - npm run build
     # - pm2 start "yarn start" --name irvanlg-portfolio
     - pm2 restart irpon-dreamocel-portfolio --update-env
+  tags:
+    - dreamocel-portfolio-runner
 
