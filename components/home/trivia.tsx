@@ -1,6 +1,7 @@
 'use client'
 
-import {PuzzleIcon} from "lucide-react";
+import {ArrowUpRightIcon, PuzzleIcon} from "lucide-react";
+import Image from "next/image";
 
 export default function Trivia() {
   return (
@@ -17,7 +18,16 @@ export default function Trivia() {
         </div>
         <p>Reached 11,000 MMR on July 7th, 2022</p>
         <p>Reached 10,000 MMR on March 2nd, 2021</p>
-        <p>Young Matu <span className="sm:text-xl text-sm text-slate-400 font-light">(Self-Proclaimed)</span></p>
+        <p className="flex justify-center items-end">
+          Young Matu
+          <span className="sm:text-xl text-sm text-slate-400 font-light flex items-center ml-2">
+          (<a href="https://www.instagram.com/p/CkiPHn0prIR/" target="_blank" className="flex items-center hover:text-white">
+            Not Self-Proclaimed
+            <Image src="/emote/copium.webp" alt="" width={16} height={16} className="w-4 h-4 ml-1"/>
+            <ArrowUpRightIcon className="ml-1 w-4 h-4"/>
+          </a>)
+          </span>
+        </p>
       </div>
     </section>
   )
