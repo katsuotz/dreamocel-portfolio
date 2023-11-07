@@ -1,12 +1,15 @@
 'use client'
 
 import {Swiper, SwiperSlide} from 'swiper/react';
-import { Pagination } from 'swiper/modules';
+import {Pagination, Mousewheel} from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
-import {TrophyIcon} from "lucide-react";
+import 'swiper/css/mousewheel';
+import {ChevronLeftIcon, ChevronRightIcon, TrophyIcon} from "lucide-react";
 import AchievementItem from "@/components/home/achievement-item";
 import {AchievementType} from "@/lib/interfaces/achievement";
+import {useCallback, useRef, useState} from "react";
+import {cn} from "@/lib/utils";
 
 export default function Achievement() {
   const experiences: AchievementType[] = [
@@ -119,6 +122,23 @@ export default function Achievement() {
     },
   ]
 
+  const sliderRef = useRef(null)
+
+  const [activeIndex, setActiveIndex] = useState(0)
+  const [totalSlides, setTotalSlides] = useState(0)
+
+  const handlePrev = useCallback(() => {
+    if (!sliderRef.current) return;
+    //@ts-ignore
+    sliderRef.current.swiper.slidePrev()
+  }, [])
+
+  const handleNext = useCallback(() => {
+    if (!sliderRef.current) return
+    //@ts-ignore
+    sliderRef.current.swiper.slideNext()
+  }, [])
+
   return (
     <section className="relative flex flex-col justify-center items-center xl:pt-16 pt-12 xl:pb-16 pb-12">
       <h2 className="text-3xl sm:text-5xl font-bold mb-20 sm:mb-24 flex items-center tracking-wider">
@@ -128,14 +148,36 @@ export default function Achievement() {
 
       <div className="w-full">
         <Swiper
-          modules={[Pagination]}
+          ref={sliderRef}
+          modules={[Pagination, Mousewheel]}
           pagination={{ clickable: true }}
           slidesPerView={'auto'}
           spaceBetween={0}
+          mousewheel
+          onSlideChange={(e) => {
+            setActiveIndex(e.activeIndex)
+            setTotalSlides(e.pagination.bullets.length)
+          }}
         >
           {experiences.map((achievement, key) => {
-            return <SwiperSlide key={key} className={key === 0 ? 'sm:ml-80' : ''}><AchievementItem achievement={achievement}/></SwiperSlide>
+            return <SwiperSlide key={key} className={key === 0 ? 'lg:ml-80' : ''}><AchievementItem achievement={achievement}/></SwiperSlide>
           })}
+          <button aria-label="Prev Slider" className={
+            cn([
+              'swiper-arrow prev-arrow',
+              activeIndex === 0 && 'disabled',
+            ])
+          } onClick={handlePrev} >
+            <ChevronLeftIcon className="w-7 h-7"/>
+          </button>
+          <button aria-label="Next Slider" className={
+            cn([
+              'swiper-arrow next-arrow',
+              activeIndex === totalSlides - 1 && 'disabled',
+            ])
+          } onClick={handleNext} >
+            <ChevronRightIcon className="w-7 h-7"/>
+          </button>
         </Swiper>
       </div>
     </section>

@@ -309,6 +309,35 @@
   background: #fff!important;
 }
 
+.swiper-arrow {
+  @apply cursor-pointer absolute z-20;
+  bottom: -55px;
+}
+
+.swiper-arrow.disabled {
+  @apply opacity-50
+}
+
+.swiper-arrow.prev-arrow {
+  @apply left-5;
+}
+
+.swiper-arrow.next-arrow {
+  @apply right-5;
+}
+
+@media (min-width: 640px) {
+  .swiper-arrow.prev-arrow {
+    @apply left-1/2;
+    transform: translateX(calc(-50% - 200px));
+  }
+
+  .swiper-arrow.next-arrow {
+    @apply right-1/2;
+    transform: translateX(calc(50% + 200px));
+  }
+}
+
 .atropos-achievement .atropos-inner {
   overflow: visible!important;
 }
