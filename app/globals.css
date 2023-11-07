@@ -315,7 +315,7 @@
 }
 
 .swiper-arrow.disabled {
-  @apply opacity-50
+  @apply opacity-50 cursor-default;
 }
 
 .swiper-arrow.prev-arrow {
