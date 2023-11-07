@@ -21,7 +21,7 @@ export default function Trivia() {
         <p className="flex justify-center items-end">
           Young Matu
           <span className="sm:text-xl text-sm text-slate-400 font-light flex items-center ml-2">
-          (<a href="https://www.instagram.com/p/CkiPHn0prIR/" target="_blank" className="flex items-center hover:text-white">
+          (<a href="https://www.instagram.com/p/CkiPHn0prIR/" target="_blank" className="flex items-center hover:text-white hover-border">
             Not Self-Proclaimed
             <Image src="/emote/copium.webp" alt="" width={16} height={16} className="w-4 h-4 ml-1"/>
             <ArrowUpRightIcon className="ml-1 w-4 h-4"/>
