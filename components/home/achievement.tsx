@@ -3,9 +3,7 @@
 import {Swiper, SwiperSlide} from 'swiper/react';
 import { Pagination } from 'swiper/modules';
 import 'swiper/css';
-import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import 'swiper/css/scrollbar';
 import {TrophyIcon} from "lucide-react";
 import AchievementItem from "@/components/home/achievement-item";
 import {AchievementType} from "@/lib/interfaces/achievement";
