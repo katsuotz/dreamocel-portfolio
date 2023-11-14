@@ -14,7 +14,7 @@ export default function RootLayout(
   }) {
   const metadata = {
     title: 'Dreamocel',
-    description: 'Professional Dota 2 Player',
+    description: 'Dreamocel. Professional Dota 2 Player.',
     author: 'Irfan Fakhri - katsuotz.com',
     keywords: 'dreamocel, fervian, randy, dota, dota 2, the international, esport, moba'
   }
