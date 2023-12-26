@@ -15,7 +15,7 @@ export default function Footer() {
           Made by
           <a href="https://katsuotz.com" target="_blank" className="text-gray-300 tracking-wide hover:text-white flex items-center hover-border">katsuotz <ArrowUpRightIcon className="w-4 h-4 ml-2" /></a>
         </div>
-        <p className="text-gray-300 tracking-wide font-light">&copy; 2023 <a href="https://www.youtube.com/watch?v=eQhYR4GpqKQ" target="_blank" className="text-white font-medium hover-border">Dreamocel</a></p>
+        <p className="text-gray-300 tracking-wide font-light">&copy; 2023 <a href="https://www.youtube.com/watch?v=17Ge8IyhN3o" target="_blank" className="text-white font-medium hover-border">Dreamocel</a></p>
       </footer>
       </div>
     </div>
