@@ -10,7 +10,8 @@ interface Social {
   image?: string
   name: string
   class?: string
-  icon?: string,
+  icon?: string
+  showMiniIcon?: boolean
 }
 
 export default function Banner() {
@@ -45,6 +46,12 @@ export default function Banner() {
       name: 'Saweria',
       url: 'https://saweria.co/Dreamocel',
       icon: 'Wallet',
+    },
+    {
+      name: 'GET YOUR OFFICIAL MERCH. NOW!',
+      url: 'https://www.tokopedia.com/lucentstore',
+      icon: 'ShoppingCart',
+      showMiniIcon: true,
     },
   ]
 
@@ -97,7 +104,17 @@ export default function Banner() {
                 </a>
               </TooltipTrigger>
               <TooltipContent>
-                <p>{social.name}</p>
+                <p className="flex items-center">
+                  {
+                    social.showMiniIcon ?
+                      <Image src="/emote/pog.webp" alt="" width={16} height={16} className="w-4 h-4 mr-1 sm:mr-2"/> : null
+                  }
+                  {social.name}
+                  {
+                    social.showMiniIcon ?
+                      <Image src="/emote/pog.webp" alt="" width={16} height={16} className="w-4 h-4 ml-1 sm:ml-2"/> : null
+                  }
+                </p>
               </TooltipContent>
             </Tooltip>
           </TooltipProvider>
